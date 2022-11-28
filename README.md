@@ -1,5 +1,7 @@
 ## Docker Wordpress [automation]
 
+Copied from here https://github.com/evertramos/docker-wordpress and added db-data folder.
+
 This repo is part of a larger script to changes in the files must be reviewed. 
 
 If you are looking of the previous version check branch basic. 
