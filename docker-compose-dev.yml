@@ -5,6 +5,8 @@ services:
     container_name: ${CONTAINER_DB_NAME}
     image: ${DB_IMAGE:-mariadb}:${DB_VERSION:-latest}
     restart: unless-stopped
+    ports:
+      - ${DOCKER_PORT_DB}:3306
     volumes:
       - ${DB_FILES}:/var/lib/mysql
     environment:
