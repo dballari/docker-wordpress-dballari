@@ -9,6 +9,7 @@ services:
       - ${DOCKER_PORT_DB}:3306
     volumes:
       - ${DB_FILES}:/var/lib/mysql
+      - ./db-data/db-dump.sql:/tmp/db-dump.sql
     environment:
       MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
       MYSQL_DATABASE: ${MYSQL_DATABASE}
