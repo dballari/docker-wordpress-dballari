@@ -27,6 +27,8 @@ services:
     volumes:
       - ${SITE_FILES}:/var/www/html
       - ./conf.d/php.ini:/usr/local/etc/php/conf.d/php.ini
+      - ./plugins:/usr/src/wordpress/wp-content/plugins
+      - ./themes:/usr/src/wordpress/wp-content/themes
     environment:
       WORDPRESS_DB_HOST: ${CONTAINER_DB_NAME}:3306
       WORDPRESS_DB_NAME: ${MYSQL_DATABASE}
