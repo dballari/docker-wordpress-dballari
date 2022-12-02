@@ -50,6 +50,10 @@ services:
       - new-site-db
     entrypoint: wp
 
+volumes:
+  new-site-wordpress:
+  new-site-db:
+  
 #networks:
 #   default:
 #     external:
