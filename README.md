@@ -1,6 +1,28 @@
+## Usage
+
+1. Clone this repo
+2. Copy either the dev or the prod docker compose file naming it docker-compose.yml
+3. Copy .env.exemple naimg it .env
+4. Edit .env file
+5. Start your docker app
+
+```
+git clone git@github.com:dballari/docker-wordpress-dballari.git <<<your_app_folder>>>
+cd <<<your_app_folder>>>
+cp docker-compose-<<<you_environment_here_prod_or_dev>>>.yml docker-compose.yml
+cp .env.example .env
+sudo nano .env
+docker-compose up
+```
+
+## Work in progress
+WP CLI still seams not to be working
+
 ## Docker Wordpress [automation]
 
-Copied from here https://github.com/evertramos/docker-wordpress and added db-data folder.
+Forked from here https://github.com/evertramos/docker-wordpress and added db-data folder.
+
+==== This is the original version of the redame file ====
 
 This repo is part of a larger script to changes in the files must be reviewed. 
 
