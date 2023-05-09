@@ -1,7 +1,8 @@
 <?php
 /**
- * Title: 404 error content.
+ * Title: Default 404
  * Slug: powder/404
+ * Description: 404 page with page not found message.
  * Categories: hidden
  * Inserter: false
  */

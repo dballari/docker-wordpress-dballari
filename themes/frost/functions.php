@@ -1,6 +1,6 @@
 <?php
 /**
- * This file adds functions to the Frost theme for WordPress.
+ * This file adds functions to the Frost WordPress theme.
  *
  * @package Frost
  * @author  WP Engine
@@ -26,17 +26,10 @@ if ( ! function_exists( 'frost_setup' ) ) {
 		// Make theme available for translation.
 		load_theme_textdomain( 'frost', get_template_directory() . '/languages' );
 
-		// Add support for Block Styles.
-		add_theme_support( 'wp-block-styles' );
-
-		// Add support for editor styles.
-		add_theme_support( 'editor-styles' );
-
 		// Enqueue editor styles and fonts.
 		add_editor_style(
 			array(
 				'./style.css',
-				frost_fonts_url(),
 			)
 		);
 
@@ -55,36 +48,38 @@ function frost_enqueue_style_sheet() {
 
 }
 
-// Enqueue fonts.
-add_action( 'wp_enqueue_scripts', 'frost_enqueue_fonts' );
-function frost_enqueue_fonts() {
+/**
+ * Register block styles.
+ *
+ * @since 0.9.2
+ */
+function frost_register_block_styles() {
 
-	wp_enqueue_style( 'frost-fonts', frost_fonts_url(), array(), null );
-
-}
-
-// Define fonts.
-function frost_fonts_url() {
-
-	// Allow child themes to disable to the default Frost fonts.
-	$dequeue_fonts = apply_filters( 'frost_dequeue_fonts', false );
-
-	if ( $dequeue_fonts ) {
-		return '';
-	}
-
-	$fonts = array(
-		'family=Jost:wght@100;200;300;400;500;600;700;800;900',
-		'family=Outfit:wght@100;200;300;400;500;600;700;800;900',
+	$block_styles = array(
+		'core/columns' => array(
+			'columns-reverse' => __( 'Reverse', 'frost' ),
+		),
+		'core/list' => array(
+			'no-disc' => __( 'No Disc', 'frost' ),
+		),
+		'core/navigation-link' => array(
+			'outline' => __( 'Outline', 'frost' ),
+		),
+		'core/social-links' => array(
+			'outline' => __( 'Outline', 'frost' ),
+		),
 	);
 
-	// Make a single request for all Google Fonts.
-	return esc_url_raw( 'https://fonts.googleapis.com/css2?' . implode( '&', array_unique( $fonts ) ) . '&display=swap' );
-
+	foreach ( $block_styles as $block => $styles ) {
+		foreach ( $styles as $style_name => $style_label ) {
+			register_block_style(
+				$block,
+				array(
+					'name'  => $style_name,
+					'label' => $style_label,
+				)
+			);
+		}
+	}
 }
-
-// Include block styles.
-require get_template_directory() . '/inc/block-styles.php';
-
-// Include block patterns.
-require get_template_directory() . '/inc/block-patterns.php';
+add_action( 'init', 'frost_register_block_styles' );

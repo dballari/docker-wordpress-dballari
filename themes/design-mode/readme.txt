@@ -1,15 +1,19 @@
 === Design Mode ===
 Contributors: bgardner
-Requires at least: 6.0
-Tested up to: 6.0
+Requires at least: 6.1
+Tested up to: 6.1
 Requires PHP: 5.6
-Stable tag: 1.0.2
+Stable tag: 1.0.3
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
 == Description ==
 
 Design Mode is a WordPress block theme created for Full Site Editing. It is stylish and sophisticated, and the minimalistic design is perfect for freelancers and agencies looking to showcase their services and work.
+
+= 1.0.3 =
+
+Add fluid spacing.
 
 = 1.0.2 =
 

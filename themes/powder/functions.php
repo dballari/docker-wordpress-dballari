@@ -62,18 +62,15 @@ function powder_register_block_styles() {
 
 	$block_styles = array(
 		'core/group' => array(
-			'full-height'  => __( 'Full-height', 'powder' ),
-			'shadow'       => __( 'Shadow', 'powder' ),
-			'shadow-solid' => __( 'Shadow Solid', 'powder' ),
+			'shadow' => __( 'Shadow', 'powder' ),
 		),
 		'core/image' => array(
-			'shadow'       => __( 'Shadow', 'powder' ),
-			'shadow-solid' => __( 'Shadow Solid', 'powder' ),
-		),
-		'core/list' => array(
-			'no-disc' => __( 'No Disc', 'powder' ),
+			'shadow' => __( 'Shadow', 'powder' ),
 		),
 		'core/navigation-link' => array(
+			'outline' => __( 'Outline', 'powder' ),
+		),
+		'core/social-links' => array(
 			'outline' => __( 'Outline', 'powder' ),
 		),
 	);

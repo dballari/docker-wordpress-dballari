@@ -1,15 +1,44 @@
 === Powder ===
 Contributors: bgardner
-Requires at least: 6.1
-Tested up to: 6.1
+Requires at least: 6.2
+Tested up to: 6.2
 Requires PHP: 5.6
-Stable tag: 0.6.2
+Stable tag: 0.7.2
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
 == Description ==
 
 Simple by design, Powder is a base WordPress block theme created for Full Site Editing. Build something for yourself, pair it with a child theme, or launch your client project with it. Whatever you choose to use it for, I hope that you enjoy it.
+
+= 0.7.2 =
+
+Style sheet, patterns, theme.json optimization.
+
+= 0.7.1 =
+
+Move styles to theme.json, update theme links.
+
+= 0.7.0 =
+
+Bump for WordPress 6.2.
+
+= 0.6.6 =
+
+Minor style change, remove styles.
+
+= 0.6.5 =
+
+Reorg comments, remove unnecessary styles.
+
+= 0.6.4 =
+
+Add fluid spacing and neutral color.
+
+= 0.6.3 =
+
+Create Query pattern, consolidate templates.
+Minor style enhancements.
 
 = 0.6.2 =
 
@@ -37,7 +66,7 @@ Initial public release.
 
 == Copyright ==
 
-Powder WordPress Theme, (C) 2022 Brian Gardner.
+Powder WordPress Theme, (C) 2022-2023 Brian Gardner.
 Powder is distributed under the terms of the GNU GPL.
 
 This program is free software: you can redistribute it and/or modify
