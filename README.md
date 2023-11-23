@@ -2,7 +2,7 @@
 
 1. Clone this repo
 2. Copy either the dev or the prod docker compose file naming it docker-compose.yml
-3. Copy .env.exemple naming it .env
+3. Copy .env.example naming it .env
 4. Edit .env file
 5. Start your docker app
 
