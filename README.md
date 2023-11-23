@@ -12,7 +12,7 @@ cd <<<your_app_folder>>>
 cp docker-compose-<<<you_environment_here_prod_or_dev>>>.yml docker-compose.yml
 cp .env.example .env
 sudo nano .env
-docker-compose up
+docker-compose up -d
 ```
 
 ## Work in progress
